@@ -1,0 +1,40 @@
+#ignore compiled template folder
+tplc/
+#ignore MacOS files
+*.DS_Store
+#*.htaccess
+*.scssc
+*.swp
+__MACOSX
+thumbs.db
+
+sitemap.xml
+.sass-cache/
+node_modules
+node_modules/
+package.json
+#uploads/
+#uploads/*
+wp-content/cache/*
+upgrade/
+debug.log
+
+# Ignore hook log
+deployments.php
+deployments.log
+deploy.php
+
+robots.txt
+db.php
+
+# api.php
+tokyoparkinginfo.php
+
+# import flag
+importflag.txt
+
+# zipcode
+my_zipterms.js
+
+# wp
+#wp-config.php
