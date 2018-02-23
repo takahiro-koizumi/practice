@@ -28,11 +28,9 @@
     // closeのclick functionを使うよー的な
     close.click();
   });
+
+  // id="modal"をクリックした時の処理
   modal.addEventListener('click', function() {
-    // modal.className = 'hidden';
-    // mask.className = 'hidden';
-    // 上記と同じ記述でも同じ動作を行うが、こっちの方がスマート
-    // closeのclick functionを使うよー的な
     close.click();
   });
 
