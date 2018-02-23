@@ -16,6 +16,18 @@ body {
   margin: 15px auto 0;
 }
 
+/* #mask,
+#modal {
+  -webkit-animation: fadeIn 1s linear;
+} */
+
+/* #mask.hidden,
+#modal.hidden {
+  display: none;
+  opacity: 0;
+  -webkit-animation: fadeOut 10s linear;
+} */
+
 #mask {
   background: rgba(0, 0, 0, .4);
   position: fixed;
@@ -24,15 +36,6 @@ body {
   right: 0;
   left: 0;
   z-index: 1;
-}
-
-#mask.hidden {
-  display: none;
-}
-
-#modal p {
-  line-height: 1.5;
-  margin: 0 0 20px;
 }
 
 #modal {
@@ -45,10 +48,25 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-  transition: .8s;
   z-index: 2;
 }
 
-#modal.hidden {
-  transform: translate(0, -500px);
+#modal p {
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+/************ fadein *************/
+#mask,
+#modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease, visibility .5s ease;
+}
+
+/************ fadeout *************/
+#mask.show,
+#modal.show {
+  opacity: 1;
+  visibility: visible;
 }

@@ -16,18 +16,19 @@ body {
   margin: 15px auto 0;
 }
 
-#mask {
+/* #mask,
+#modal {
+  z-index: 0;
+  visibility: hidden;
+} */
+
+#mask.show {
   background: rgba(0, 0, 0, .4);
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 1;
-}
-
-#mask.hidden {
-  display: none;
 }
 
 #modal p {
@@ -38,17 +39,14 @@ body {
 #modal {
   background: #fff;
   width: 300px;
+  height: 100vh;
   padding: 20px;
-  border-radius: 4px;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  transition: .8s;
-  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: -340px;
+  transition: 1s;
 }
 
-#modal.hidden {
-  transform: translate(0, -500px);
+#modal.show {
+  right: 0;
 }
